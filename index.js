@@ -80,11 +80,15 @@ function makeSmartPerson(name) {
   let num2 = 3;
   return {
     name: name,
-    sum: num1 + num2,
-    speak: `Hello , my name is ${name}`
+
+    // sum: num1 + num2,
+    speak: function() {
+      return `Hello , my name is ${name}`;
+    }
   };
 }
-console.log(makeSmartPerson);
+let chrisperson = makeSmartPerson("Chris");
+console.log(chrisperson.speak());
 
 /*
 // ⭐️ Example Test Data ⭐️
